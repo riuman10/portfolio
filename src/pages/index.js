@@ -11,14 +11,12 @@ export default function Home() {
 
   const fetchData = async () => {
     const {data , error} = await supabase.from("children").select()
-    
     setData(data)
   }
 
   useEffect(() => {
     fetchData(); 
   },[]);
-
 
   return (
     <>
